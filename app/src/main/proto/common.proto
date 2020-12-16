@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_package = "com.example.protodatastoresample";
+option java_multiple_files = true;
+
+message UserProto {
+  string fullName = 1;
+  string imageUrl = 2;
+  int64 phone = 3;
+  bool isMale = 4;
+  float hight = 5;
+}
+
+message JobProto {
+  string id = 1;
+  bool status = 2;
+  int32 walletAmount = 3;
+
+  message DriverProto {
+    string driverId = 4;
+    string name = 5;
+    int32 age = 6;
+  }
+
+  DriverProto driver = 7;
+}
